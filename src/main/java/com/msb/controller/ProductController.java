@@ -13,11 +13,11 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @GetMapping("/findProductById")
+    @GetMapping("/show")
     public String findProductById(Integer id , Model model){
         Product product = productService.findProductById(1);
         model.addAttribute(product);
-        return "success";
+        return "show";
     }
 
 
